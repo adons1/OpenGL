@@ -1,5 +1,6 @@
 #include<iostream>
 #include<glad/glad.h>
+
 #include<GLFW/glfw3.h>
 
 #include"shaderClass.h"
@@ -24,7 +25,9 @@ GLuint indices[] =
 	3, 2, 4, // Lower right triangle
 	5, 4, 1 // Upper triangle
 };
+void TriangleInit(Shader* shaderProgram, VAO _VAO, VBO _VBO, EBO _EBO) {
 
+}
 void Triangle(Shader shaderProgram, VAO _VAO, EBO _EBO) {
 	float timeValue = glfwGetTime();
 	float redValue = sin(5.0f * timeValue) / 2.0f + 0.5f;
@@ -70,17 +73,71 @@ void Square(Shader shaderProgram, VAO _VAO, EBO _EBO) {
 	glDrawElements(GL_TRIANGLES, 7, GL_UNSIGNED_INT, 0);
 	_EBO.Unbind();
 }
+GLfloat x_circle_move;
+GLfloat y_circle_move;
+GLfloat z_circle_move = 0.0f;
+
+GLfloat angle_circle_rotate;
 void Circle(Shader shaderProgram, VAO _VAO, EBO _EBO) {
+	GLfloat move_circle_id = glGetUniformLocation(shaderProgram.ID, "move");
 	shaderProgram.Activate();
 	_VAO.Bind();
 	_EBO.Bind();
 	glDrawElements(GL_TRIANGLES, 150, GL_UNSIGNED_INT, 0);
+	glUniform3f(move_circle_id, x_circle_move, y_circle_move, z_circle_move);
+	//glUniform1f(move_circle_id, angle_circle_rotate);
+	//x_circle_move = 0.0f;
+	//y_circle_move = 0.0f;
 	_EBO.Unbind();
+}
+float speed = 0.01f;
+void keyCallback(GLFWwindow* window, int key, int scanCode, int action, int mods) {
+	if (key == GLFW_KEY_A) {
+		x_circle_move += -speed;
+		printf("A ");
+	}
+	if (key == GLFW_KEY_D) {
+		x_circle_move += speed;
+		printf("D ");
+	}
+	if (key == GLFW_KEY_W) {
+		y_circle_move += speed;
+		printf("W ");
+	}
+	if (key == GLFW_KEY_S) {
+		y_circle_move += -speed;
+		printf("S ");
+	}
+	if (key == GLFW_KEY_SPACE) {
+		z_circle_move += 0.01f;
+		printf("S ");
+		//z_circle_move += 0.0f;
+	}
+	//if (key == GLFW_KEY_E) {
+	//	y_circle_move += speed;
+	//	printf("W ");
+	//}
+	//if (key == GLFW_KEY_Q) {
+	//	y_circle_move += -speed;
+	//	printf("S ");
+	//}
+	if (key == GLFW_KEY_UP) {
+		if (speed < 0.2f) {
+			speed += 0.01f;
+		}
+		printf("UP ");
+	}
+	if (key == GLFW_KEY_DOWN) {
+		if (speed > 0.01f) {
+			speed += -0.01f;
+		}
+		printf("DOWN ");
+	}
 }
 int main()
 {
 	try {
-
+		
 	
 		// Initialize GLFW
 		glfwInit();
@@ -96,6 +153,7 @@ int main()
 
 		// Create a GLFWwindow object of 800 by 800 pixels, naming it "YoutubeOpenGL"
 		GLFWwindow* window = glfwCreateWindow(800, 800, "OpenGL_Adons", NULL, NULL);
+		glfwSetKeyCallback(window, keyCallback);
 		// Error check if the window fails to create
 		if (window == NULL)
 		{
@@ -112,98 +170,96 @@ int main()
 		// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
 		glViewport(0, 0, 800, 800);
 
-
-
-		// Generates Shader object using shaders defualt.vert and default.frag
-		Shader shaderProgram1("square.vert", "square.frag");
-		Shader shaderProgram2("circle.vert", "circle.frag");
-		Shader shaderProgram("default.vert", "default.frag");
-	
-
-
 		// Generates Vertex Array Object and binds it
+
+#pragma region »ÌËˆË‡ÎËÁËÛÂÏ ÙË„Û˚
+		//-----------------------------------------------------------------------------------------------------------------------------------
 		VAO VAO1;
-		VAO1.Bind();
-		printf("VAO%p\n", &VAO1.ID);
+		//-------»Õ»÷»»–”≈Ã “–≈”√ŒÀ‹Õ» ----------------------------------------------------------
+			Shader shaderProgram("default.vert", "default.frag");
+			VAO1.Bind();
+			printf("VAO%p\n", &VAO1.ID);
+			// Generates Vertex Buffer Object and links it to vertices
+			VBO VBO1(vertices, sizeof(vertices));
+			// Generates Element Buffer Object and links it to indices
+			EBO EBO1(indices, sizeof(indices));
 
-		// Generates Vertex Buffer Object and links it to vertices
-		VBO VBO1(vertices, sizeof(vertices));
-		// Generates Element Buffer Object and links it to indices
-		EBO EBO1(indices, sizeof(indices));
+			// Links VBO to VAO
+			VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 6 * sizeof(float), (void*)0);
+			VAO1.LinkAttrib(VBO1, 1, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 
-
-
-		// Links VBO to VAO
-		VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 6 * sizeof(float), (void*)0);
-		VAO1.LinkAttrib(VBO1, 1, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-
-		VAO1.Unbind();
-		VBO1.Unbind();
-		EBO1.Unbind();
-
-		VAO1.Bind();
-		// Generates Vertex Buffer Object and links it to vertices
-		VBO VBO2(vertices_square, sizeof(vertices_square));
-		// Generates Element Buffer Object and links it to indices
-		EBO EBO2(indices_square, sizeof(indices_square));
-		VAO1.LinkAttrib(VBO2, 2, 3, GL_FLOAT, 3 * sizeof(float), (void*)0);
+			VAO1.Unbind();
+			VBO1.Unbind();
+			EBO1.Unbind();
+		//-------»Õ»÷»»–”≈Ã “–≈”√ŒÀ‹Õ» ----------------------------------------------------------
+		//-------»Õ»÷»»–”≈Ã  ¬¿ƒ–¿“--------------------------------------------------------------
+			Shader shaderProgram1("square.vert", "square.frag");
+			VAO1.Bind();
+			// Generates Vertex Buffer Object and links it to vertices
+			VBO VBO2(vertices_square, sizeof(vertices_square));
+			// Generates Element Buffer Object and links it to indices
+			EBO EBO2(indices_square, sizeof(indices_square));
+			VAO1.LinkAttrib(VBO2, 2, 3, GL_FLOAT, 3 * sizeof(float), (void*)0);
 
 	
-		// Unbind all to prevent accidentally modifying them
-		VAO1.Unbind();
-		VBO2.Unbind();
-		EBO2.Unbind();
+			// Unbind all to prevent accidentally modifying them
+			VAO1.Unbind();
+			VBO2.Unbind();
+			EBO2.Unbind();
+		//-------»Õ»÷»»–”≈Ã  ¬¿ƒ–¿“----------------------------------------------------------
+		//-------»Õ»÷»»–”≈Ã  –”√-------------------------------------------------------------
+			Shader shaderProgram2("circle.vert", "circle.frag");
+			GLfloat vertices_circle[606] = {};
+			GLfloat step = 360.0f / 40.f;
+			GLfloat angle = 0;
+			vertices_circle[0] = 0.0f;
+			vertices_circle[1] = 0.0f;
+			vertices_circle[2] = 0.0f;
+			vertices_circle[3] = 1.0f;
+			vertices_circle[4] = 1.0f;
+			vertices_circle[5] = 0.0f;
+			float x = 1.0f / 100.0f;
+			float col = 0.0f;
+			for (int i = 6; i < 600; i+=6) {
+				vertices_circle[i + 0] = 0.3f * sin(angle * (3.14f / 180.0f));
+				vertices_circle[i + 1] = 0.3f * cos(angle * (3.14f / 180.0f));
+				vertices_circle[i + 2] = 0.0f;
+				vertices_circle[i + 3] = col;
+				vertices_circle[i + 4] = col;
+				vertices_circle[i + 5] = 0.0f;
+				angle += step;
+				col += x;
+				printf("(%f, %f, %f, %f, %f, %f)\n", vertices_circle[i + 0], vertices_circle[i + 1], vertices_circle[i + 2], vertices_circle[i + 3], vertices_circle[i + 4], vertices_circle[i + 5]);
+			}
+			GLuint indicies_circle[150] = {};
+			int plus = 1;
+			int adjust = 0;
+			for (int i = 0; i < 147; i+=3) {
+				indicies_circle[i + 0] = 0;
+				indicies_circle[i + 1] = plus;
+				indicies_circle[i + 2] = 1 + plus;
+				plus++;
+				adjust++;
+			}
+			for (int i = 0; i < 150; i += 3) {
+				printf("(%d, %d, %d)\n", indicies_circle[i + 0], indicies_circle[i + 1], indicies_circle[i + 2]);
+			}
 
-		GLfloat vertices_circle[606] = {};
-		GLfloat step = 360.0f / 40.f;
-		GLfloat angle = 0;
-		vertices_circle[0] = 0.0f;
-		vertices_circle[1] = 0.0f;
-		vertices_circle[2] = 0.0f;
-		vertices_circle[3] = 1.0f;
-		vertices_circle[4] = 1.0f;
-		vertices_circle[5] = 0.0f;
-		float x = 1.0f / 100.0f;
-		float col = 0.0f;
-		for (int i = 6; i < 600; i+=6) {
-			vertices_circle[i + 0] = 0.3f * sin(angle * (3.14f / 180.0f));
-			vertices_circle[i + 1] = 0.3f * cos(angle * (3.14f / 180.0f));
-			vertices_circle[i + 2] = 0.0f;
-			vertices_circle[i + 3] = col;
-			vertices_circle[i + 4] = col;
-			vertices_circle[i + 5] = 0.0f;
-			angle += step;
-			col += x;
-			printf("(%f, %f, %f, %f, %f, %f)\n", vertices_circle[i + 0], vertices_circle[i + 1], vertices_circle[i + 2], vertices_circle[i + 3], vertices_circle[i + 4], vertices_circle[i + 5]);
-		}
-		printf("Â·‡ÎÓ");
-		GLuint indicies_circle[150] = {};
-		int plus = 1;
-		int adjust = 0;
-		for (int i = 0; i < 147; i+=3) {
-			indicies_circle[i + 0] = 0;
-			indicies_circle[i + 1] = plus;
-			indicies_circle[i + 2] = 1 + plus;
-			plus++;
-			adjust++;
-		}
-		for (int i = 0; i < 150; i += 3) {
-			printf("(%d, %d, %d)\n", indicies_circle[i + 0], indicies_circle[i + 1], indicies_circle[i + 2]);
-		}
+			VAO1.Bind();
+			// Generates Vertex Buffer Object and links it to vertices
+			VBO VBO3(vertices_circle, sizeof(vertices_circle));
+			// Generates Element Buffer Object and links it to indices
+			EBO EBO3(indicies_circle, sizeof(indicies_circle));
+			VAO1.LinkAttrib(VBO3, 3, 3, GL_FLOAT, 6 * sizeof(float), (void*)0);
+			VAO1.LinkAttrib(VBO3, 4, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 
-		VAO1.Bind();
-		// Generates Vertex Buffer Object and links it to vertices
-		VBO VBO3(vertices_circle, sizeof(vertices_circle));
-		// Generates Element Buffer Object and links it to indices
-		EBO EBO3(indicies_circle, sizeof(indicies_circle));
-		VAO1.LinkAttrib(VBO3, 3, 3, GL_FLOAT, 6 * sizeof(float), (void*)0);
-		VAO1.LinkAttrib(VBO3, 4, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-
-		// Unbind all to prevent accidentally modifying them
-		VAO1.Unbind();
-		VBO3.Unbind();
-		EBO3.Unbind();
-
+			// Unbind all to prevent accidentally modifying them
+			VAO1.Unbind();
+			VBO3.Unbind();
+			EBO3.Unbind();
+		//-------»Õ»÷»»–”≈Ã  –”√----------------------------------------------------------
+		//-----------------------------------------------------------------------------------------------------------------------------------
+#pragma endregion
 
 		// Main while loop
 		while (!glfwWindowShouldClose(window))
