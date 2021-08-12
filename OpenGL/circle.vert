@@ -1,6 +1,6 @@
 #version 330 core
-layout (location = 3) in vec3 aPos;
-layout (location = 4) in vec3 aaColor;
+layout (location = 6) in vec3 aPos;
+layout (location = 7) in vec3 aaColor;
 
 out vec3 color;
 uniform vec3 move;

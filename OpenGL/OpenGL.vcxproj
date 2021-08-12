@@ -77,6 +77,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>C:\Users\anton\source\repos\OpenGL\OpenGL\Libraries\include;$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>C:\Users\anton\source\repos\OpenGL\OpenGL\Libraries\lib;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -85,6 +87,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>C:\Users\anton\source\repos\OpenGL\OpenGL\Libraries\include;$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>C:\Users\anton\source\repos\OpenGL\OpenGL\Libraries\lib;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -149,6 +153,7 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="shaderClass.cpp" />
+    <ClCompile Include="stb.cpp" />
     <ClCompile Include="VAO.cpp" />
     <ClCompile Include="VBO.cpp" />
   </ItemGroup>
@@ -159,6 +164,8 @@
     <None Include="default.vert" />
     <None Include="square.frag" />
     <None Include="square.vert" />
+    <None Include="square_textured.frag" />
+    <None Include="square_textured.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EBO.h" />

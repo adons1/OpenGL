@@ -36,6 +36,9 @@
     <ClCompile Include="EBO.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="stb.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="default.vert">
@@ -54,6 +57,12 @@
       <Filter>Файлы ресурсов\Shaders</Filter>
     </None>
     <None Include="circle.frag">
+      <Filter>Файлы ресурсов\Shaders</Filter>
+    </None>
+    <None Include="square_textured.vert">
+      <Filter>Файлы ресурсов\Shaders</Filter>
+    </None>
+    <None Include="square_textured.frag">
       <Filter>Файлы ресурсов\Shaders</Filter>
     </None>
   </ItemGroup>
