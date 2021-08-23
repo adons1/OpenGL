@@ -77,6 +77,12 @@
     <None Include="pyramide.frag">
       <Filter>Файлы ресурсов\Shaders</Filter>
     </None>
+    <None Include="lightning.vert">
+      <Filter>Файлы ресурсов\Shaders</Filter>
+    </None>
+    <None Include="lightning.frag">
+      <Filter>Файлы ресурсов\Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaderClass.h">

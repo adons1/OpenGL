@@ -164,6 +164,8 @@
     <None Include="circle.vert" />
     <None Include="default.frag" />
     <None Include="default.vert" />
+    <None Include="lightning.frag" />
+    <None Include="lightning.vert" />
     <None Include="pyramide.frag" />
     <None Include="pyramide.vert" />
     <None Include="square.frag" />
