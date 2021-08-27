@@ -16,6 +16,21 @@
     <Filter Include="Файлы ресурсов\Shaders">
       <UniqueIdentifier>{015f9d69-61d5-4ad4-8e69-85a23e331745}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Square">
+      <UniqueIdentifier>{3a36e137-2afe-4081-8c3f-fad217fdcdc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Triangle">
+      <UniqueIdentifier>{71ea18af-9343-4a84-9528-dc487420618a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Pyramide">
+      <UniqueIdentifier>{4b2dad46-ab73-4d9d-80d2-a83b32a31f9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\LightningCube">
+      <UniqueIdentifier>{d4e15895-0fbd-4887-a759-f8b53c312183}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Circle">
+      <UniqueIdentifier>{8372c77d-4fd1-41ae-badb-94c46a1d222a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glad.c">
@@ -25,9 +40,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="shaderClass.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="VBO.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="VAO.cpp">
@@ -43,6 +55,24 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Исходные файлы\Square</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Исходные файлы\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Pyramide.cpp">
+      <Filter>Исходные файлы\Pyramide</Filter>
+    </ClCompile>
+    <ClCompile Include="LightningCube.cpp">
+      <Filter>Исходные файлы\LightningCube</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Исходные файлы\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="VBO.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -102,6 +132,9 @@
     </ClInclude>
     <ClInclude Include="Camera.h">
       <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Pyramide.h">
+      <Filter>Исходные файлы\Pyramide</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
