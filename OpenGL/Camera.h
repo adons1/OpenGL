@@ -33,6 +33,7 @@ public:
 
 	// Camera constructor to set up initial values
 	Camera(int width, int height, glm::vec3 position);
+	Camera() {}
 
 	// Updates the camera matrix to the Vertex Shader
 	void updateMatrix(float FOVdeg, float nearPlane, float farPlane);

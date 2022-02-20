@@ -31,6 +31,30 @@
     <Filter Include="Исходные файлы\Circle">
       <UniqueIdentifier>{8372c77d-4fd1-41ae-badb-94c46a1d222a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Triangle">
+      <UniqueIdentifier>{bd73b8e6-472f-409f-a66e-5c3a51d231d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Camera">
+      <UniqueIdentifier>{06379f34-3bd2-46f8-9d58-e9ed882b2092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Figure">
+      <UniqueIdentifier>{6fb39210-a538-4a48-8126-edb72d3233c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Square">
+      <UniqueIdentifier>{e9c66995-e51b-42c2-9906-326f8af3091c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Object">
+      <UniqueIdentifier>{39f6c496-1638-454a-bedc-25f237670bf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\TexturedSquare">
+      <UniqueIdentifier>{2c66c7fd-71b9-4b9b-9545-9e77f455a291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\TexturedSquare">
+      <UniqueIdentifier>{a3a12c65-a4e1-47bc-9c95-b35bd8cfad5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Circle">
+      <UniqueIdentifier>{5583aac0-c753-4be1-8303-1e434f400e78}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glad.c">
@@ -74,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="VBO.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="TexturedSquare.cpp">
+      <Filter>Исходные файлы\TexturedSquare</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,11 +157,32 @@
     <ClInclude Include="Texture.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="Pyramide.h">
       <Filter>Исходные файлы\Pyramide</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Файлы заголовков\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Файлы заголовков\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Figure.h">
+      <Filter>Файлы заголовков\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Файлы заголовков\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="TexturedSquare.h">
+      <Filter>Файлы заголовков\TexturedSquare</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Файлы заголовков\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="Observable.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
