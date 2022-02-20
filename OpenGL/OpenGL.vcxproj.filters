@@ -16,46 +16,46 @@
     <Filter Include="Файлы ресурсов\Shaders">
       <UniqueIdentifier>{015f9d69-61d5-4ad4-8e69-85a23e331745}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Square">
-      <UniqueIdentifier>{3a36e137-2afe-4081-8c3f-fad217fdcdc4}</UniqueIdentifier>
+    <Filter Include="Исходные файлы\Objects">
+      <UniqueIdentifier>{d0688d90-ff53-49fa-9632-bfd97f10e8b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Triangle">
+    <Filter Include="Исходные файлы\Objects\Triangle">
       <UniqueIdentifier>{71ea18af-9343-4a84-9528-dc487420618a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Pyramide">
-      <UniqueIdentifier>{4b2dad46-ab73-4d9d-80d2-a83b32a31f9a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\LightningCube">
-      <UniqueIdentifier>{d4e15895-0fbd-4887-a759-f8b53c312183}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\Circle">
-      <UniqueIdentifier>{8372c77d-4fd1-41ae-badb-94c46a1d222a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы заголовков\Triangle">
-      <UniqueIdentifier>{bd73b8e6-472f-409f-a66e-5c3a51d231d4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы заголовков\Camera">
-      <UniqueIdentifier>{06379f34-3bd2-46f8-9d58-e9ed882b2092}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы заголовков\Square">
-      <UniqueIdentifier>{e9c66995-e51b-42c2-9906-326f8af3091c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы заголовков\Object">
-      <UniqueIdentifier>{39f6c496-1638-454a-bedc-25f237670bf5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\TexturedSquare">
+    <Filter Include="Исходные файлы\Objects\TexturedSquare">
       <UniqueIdentifier>{2c66c7fd-71b9-4b9b-9545-9e77f455a291}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\TexturedSquare">
-      <UniqueIdentifier>{a3a12c65-a4e1-47bc-9c95-b35bd8cfad5f}</UniqueIdentifier>
+    <Filter Include="Исходные файлы\Objects\Square">
+      <UniqueIdentifier>{3a36e137-2afe-4081-8c3f-fad217fdcdc4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Circle">
-      <UniqueIdentifier>{5583aac0-c753-4be1-8303-1e434f400e78}</UniqueIdentifier>
+    <Filter Include="Исходные файлы\Objects\Pyramide">
+      <UniqueIdentifier>{4b2dad46-ab73-4d9d-80d2-a83b32a31f9a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Pyramide">
+    <Filter Include="Исходные файлы\Objects\LightningCube">
+      <UniqueIdentifier>{d4e15895-0fbd-4887-a759-f8b53c312183}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Objects\Circle">
+      <UniqueIdentifier>{8372c77d-4fd1-41ae-badb-94c46a1d222a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Objects">
+      <UniqueIdentifier>{dac73bba-9626-4580-ace0-876c477fad67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Objects\Pyramide">
       <UniqueIdentifier>{45096adb-5561-4257-998a-f80fa01f6d4c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\LightningCube">
+    <Filter Include="Файлы заголовков\Objects\Square">
+      <UniqueIdentifier>{e9c66995-e51b-42c2-9906-326f8af3091c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Objects\TexturedSquare">
+      <UniqueIdentifier>{a3a12c65-a4e1-47bc-9c95-b35bd8cfad5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Objects\Triangle">
+      <UniqueIdentifier>{bd73b8e6-472f-409f-a66e-5c3a51d231d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Objects\Circle">
+      <UniqueIdentifier>{5583aac0-c753-4be1-8303-1e434f400e78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Objects\LightningCube">
       <UniqueIdentifier>{e7a6260e-d7dc-4e51-b05b-7465a627bf38}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -85,25 +85,25 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Square.cpp">
-      <Filter>Исходные файлы\Square</Filter>
+      <Filter>Исходные файлы\Objects\Square</Filter>
     </ClCompile>
     <ClCompile Include="Triangle.cpp">
-      <Filter>Исходные файлы\Triangle</Filter>
+      <Filter>Исходные файлы\Objects\Triangle</Filter>
     </ClCompile>
     <ClCompile Include="Pyramide.cpp">
-      <Filter>Исходные файлы\Pyramide</Filter>
+      <Filter>Исходные файлы\Objects\Pyramide</Filter>
     </ClCompile>
     <ClCompile Include="LightningCube.cpp">
-      <Filter>Исходные файлы\LightningCube</Filter>
+      <Filter>Исходные файлы\Objects\LightningCube</Filter>
     </ClCompile>
     <ClCompile Include="Circle.cpp">
-      <Filter>Исходные файлы\Circle</Filter>
+      <Filter>Исходные файлы\Objects\Circle</Filter>
     </ClCompile>
     <ClCompile Include="VBO.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="TexturedSquare.cpp">
-      <Filter>Исходные файлы\TexturedSquare</Filter>
+      <Filter>Исходные файлы\Objects\TexturedSquare</Filter>
     </ClCompile>
     <ClCompile Include="Observable.cpp">
       <Filter>Исходные файлы</Filter>
@@ -164,34 +164,34 @@
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Файлы заголовков\Triangle</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Файлы заголовков\Camera</Filter>
+      <Filter>Файлы заголовков\Objects\Triangle</Filter>
     </ClInclude>
     <ClInclude Include="Square.h">
-      <Filter>Файлы заголовков\Square</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>Файлы заголовков\Object</Filter>
+      <Filter>Файлы заголовков\Objects\Square</Filter>
     </ClInclude>
     <ClInclude Include="TexturedSquare.h">
-      <Filter>Файлы заголовков\TexturedSquare</Filter>
+      <Filter>Файлы заголовков\Objects\TexturedSquare</Filter>
     </ClInclude>
     <ClInclude Include="Circle.h">
-      <Filter>Файлы заголовков\Circle</Filter>
+      <Filter>Файлы заголовков\Objects\Circle</Filter>
     </ClInclude>
     <ClInclude Include="Observable.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Pyramide.h">
-      <Filter>Файлы заголовков\Pyramide</Filter>
+      <Filter>Файлы заголовков\Objects\Pyramide</Filter>
     </ClInclude>
     <ClInclude Include="Light.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="LightningCube.h">
-      <Filter>Файлы заголовков\LightningCube</Filter>
+      <Filter>Файлы заголовков\Objects\LightningCube</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
