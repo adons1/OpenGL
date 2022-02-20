@@ -37,9 +37,6 @@
     <Filter Include="Файлы заголовков\Camera">
       <UniqueIdentifier>{06379f34-3bd2-46f8-9d58-e9ed882b2092}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков\Figure">
-      <UniqueIdentifier>{6fb39210-a538-4a48-8126-edb72d3233c8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Файлы заголовков\Square">
       <UniqueIdentifier>{e9c66995-e51b-42c2-9906-326f8af3091c}</UniqueIdentifier>
     </Filter>
@@ -54,6 +51,12 @@
     </Filter>
     <Filter Include="Файлы заголовков\Circle">
       <UniqueIdentifier>{5583aac0-c753-4be1-8303-1e434f400e78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Pyramide">
+      <UniqueIdentifier>{45096adb-5561-4257-998a-f80fa01f6d4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\LightningCube">
+      <UniqueIdentifier>{e7a6260e-d7dc-4e51-b05b-7465a627bf38}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -160,17 +163,11 @@
     <ClInclude Include="Texture.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Pyramide.h">
-      <Filter>Исходные файлы\Pyramide</Filter>
-    </ClInclude>
     <ClInclude Include="Triangle.h">
       <Filter>Файлы заголовков\Triangle</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
       <Filter>Файлы заголовков\Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="Figure.h">
-      <Filter>Файлы заголовков\Figure</Filter>
     </ClInclude>
     <ClInclude Include="Square.h">
       <Filter>Файлы заголовков\Square</Filter>
@@ -186,6 +183,15 @@
     </ClInclude>
     <ClInclude Include="Observable.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Pyramide.h">
+      <Filter>Файлы заголовков\Pyramide</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="LightningCube.h">
+      <Filter>Файлы заголовков\LightningCube</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

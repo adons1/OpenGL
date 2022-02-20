@@ -53,9 +53,3 @@ void Triangle::Draw() {
 	glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
 	_EBO.Unbind();
 }
-
-void Triangle::Dispose() {
-	_VBO.Delete();
-	_EBO.Delete();
-	shader.Delete();
-}

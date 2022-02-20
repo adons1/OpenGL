@@ -1,10 +1,11 @@
 #include "Observable.h"
+#include <vector>
 
 static std::vector<Object*> observers;
 void Observable::Notify(int key) {
 
-	for (Object* obj : observers) {
-		obj->Control(key);
+	for (Object * object : observers) {
+		object->Control(key);
 	}
 }
 void Observable::Add(Object* object) {

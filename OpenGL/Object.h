@@ -9,6 +9,7 @@
 
 class Object {
 protected:
+	int object_id;
 	GLFWwindow* window;
 	Camera* camera;
 	Shader shader;
@@ -18,13 +19,20 @@ protected:
 
 	void Init();
 public:
-	Object(VAO* _VAO, Camera* camera, GLFWwindow* window) {
+	Object(){}
+	Object(VAO* _VAO, Camera* camera, GLFWwindow* window, int object_id = 0) {
 		this->_VAO = _VAO;
 		this->camera = camera;
 		this->window = window;
+		this->object_id = object_id;
 	}
 
 	void Draw();
-	void Control(int key) {}
-	void Dispose();
+	virtual void Control(int key) {
+	};
+	void Dispose() {
+		_VBO.Delete();
+		_EBO.Delete();
+		shader.Delete();
+	}
 };

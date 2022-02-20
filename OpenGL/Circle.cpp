@@ -62,7 +62,6 @@ void Circle::Draw() {
 	_EBO.Unbind();
 }
 void Circle::Control(int key) {
-	printf("%d\n", key);
 	if (key == GLFW_KEY_A) {
 		x_circle_move += -speed;
 		printf("A ");
@@ -82,7 +81,6 @@ void Circle::Control(int key) {
 	if (key == GLFW_KEY_SPACE) {
 		z_circle_move += 0.01f;
 		printf("S ");
-
 	}
 	if (key == GLFW_KEY_UP) {
 		if (speed < 0.2f) {
@@ -96,9 +94,4 @@ void Circle::Control(int key) {
 		}
 		printf("DOWN ");
 	}
-}
-void Circle::Dispose() {
-	_VBO.Delete();
-	_EBO.Delete();
-	shader.Delete();
 }

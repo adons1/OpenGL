@@ -46,8 +46,3 @@ void TexturedSquare::Draw() {
 
 	_EBO.Unbind();
 }
-void TexturedSquare::Dispose() {
-	_VBO.Delete();
-	_EBO.Delete();
-	shader.Delete();
-}

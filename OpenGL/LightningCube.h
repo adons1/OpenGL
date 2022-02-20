@@ -2,7 +2,7 @@
 #include "Object.h"
 #include "Light.h"
 
-class Pyramide : public Object {
+class LightningCube : public Object {
 protected:
 	Texture texture;
 	DotLight* light;
@@ -14,8 +14,8 @@ protected:
 	double prevTime = glfwGetTime();
 	void Init();
 public:
-	Pyramide(){}
-	Pyramide(VAO* _VAO, Camera* camera, GLFWwindow* window, const unsigned int width, const unsigned int height, int pyramideId, DotLight* light) : Object(_VAO, camera, window, pyramideId) {
+	LightningCube() {}
+	LightningCube(VAO* _VAO, Camera* camera, GLFWwindow* window, DotLight* light) : Object(_VAO, camera, window) {
 		Init();
 		this->width = width;
 		this->height = height;

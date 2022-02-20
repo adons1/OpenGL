@@ -1,7 +1,7 @@
 #pragma once
 #include "Object.h"
 
-class Triangle : Object {
+class Triangle : public Object {
 protected:
 	void Init();
 public:
@@ -10,5 +10,7 @@ public:
 	}
 
 	void Draw();
-	void Dispose();
+	void Dispose() {
+		Object::Dispose();
+	}
 };

@@ -1,7 +1,7 @@
 #pragma once
 #include "Object.h"
 
-class TexturedSquare : Object {
+class TexturedSquare : public Object {
 protected:
 	Texture texture;
 	void Init();
@@ -11,5 +11,7 @@ public:
 	}
 
 	void Draw();
-	void Dispose();
+	void Dispose() {
+		Object::Dispose();
+	}
 };

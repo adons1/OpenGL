@@ -37,9 +37,3 @@ void Square::Draw() {
 	glDrawElements(GL_TRIANGLES, 7, GL_UNSIGNED_INT, 0);
 	_EBO.Unbind();
 }
-
-void Square::Dispose() {
-	_VBO.Delete();
-	_EBO.Delete();
-	shader.Delete();
-}
