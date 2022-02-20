@@ -157,6 +157,7 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="LightningCube.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Observable.cpp" />
     <ClCompile Include="Pyramide.cpp" />
     <ClCompile Include="shaderClass.cpp" />
     <ClCompile Include="Square.cpp" />

@@ -102,6 +102,9 @@
     <ClCompile Include="TexturedSquare.cpp">
       <Filter>Исходные файлы\TexturedSquare</Filter>
     </ClCompile>
+    <ClCompile Include="Observable.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="default.vert">

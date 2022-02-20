@@ -1,7 +1,7 @@
 #include "Circle.h"
 
 void Circle::Init() {
-	Shader shaderProgram2("circle.vert", "circle.frag");
+	shader = Shader("circle.vert", "circle.frag");
 	GLfloat vertices_circle[606] = {};
 	GLfloat step = 360.0f / 40.f;
 	GLfloat angle = 0;
@@ -62,6 +62,7 @@ void Circle::Draw() {
 	_EBO.Unbind();
 }
 void Circle::Control(int key) {
+	printf("%d\n", key);
 	if (key == GLFW_KEY_A) {
 		x_circle_move += -speed;
 		printf("A ");

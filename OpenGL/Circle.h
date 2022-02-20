@@ -10,9 +10,7 @@ protected:
 public:
 	Circle(VAO* _VAO, Camera* camera, GLFWwindow* window) : Object(_VAO, camera, window) {
 		Init();
-
-
-		//Observable::Add(this);
+		Observable::Add(this);
 	}
 
 	void Draw();
