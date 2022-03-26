@@ -61,6 +61,15 @@
     <Filter Include="Исходные файлы\libs">
       <UniqueIdentifier>{f35004a4-47f3-47d5-b35a-528c6c9a8c3a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Objects\Face">
+      <UniqueIdentifier>{a300807c-f5ed-4193-b562-5755ee91b7f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Objects\Face">
+      <UniqueIdentifier>{319603d6-c7f1-47c2-bb22-e454a197c7a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Shaders\Model">
+      <UniqueIdentifier>{f37140ba-cf8b-4281-aafc-059c5d264d58}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -111,6 +120,12 @@
     <ClCompile Include="glad.c">
       <Filter>Исходные файлы\libs</Filter>
     </ClCompile>
+    <ClCompile Include="model.cpp">
+      <Filter>Исходные файлы\Objects\Face</Filter>
+    </ClCompile>
+    <ClCompile Include="obj_loader.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="default.vert">
@@ -148,6 +163,12 @@
     </None>
     <None Include="lightning.frag">
       <Filter>Файлы ресурсов\Shaders</Filter>
+    </None>
+    <None Include="model.vert">
+      <Filter>Файлы ресурсов\Shaders\Model</Filter>
+    </None>
+    <None Include="model.frag">
+      <Filter>Файлы ресурсов\Shaders\Model</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +215,15 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
+      <Filter>Файлы заголовков\Objects\Face</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_loader.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoader.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

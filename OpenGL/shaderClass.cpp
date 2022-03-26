@@ -1,5 +1,19 @@
 #include"shaderClass.h"
 
+int Shader::shaderLocationPointer = 0;
+
+std::string setLocation(std::string shader) {
+	int indexVert = shader.find("0000");
+
+	shader.replace(indexVert, 4, std::to_string(Shader::shaderLocationPointer));
+
+	int indexNorm = shader.find("0000");
+
+	shader.replace(indexNorm, 4, std::to_string(Shader::shaderLocationPointer + 1));
+
+	return shader;
+}
+
 std::string get_file_contents(const char* filename)
 {
 	std::ifstream in(filename, std::ios::binary);
@@ -19,7 +33,7 @@ Shader::Shader(){}
 
 Shader::Shader(const char* vertexFile, const char* fragmentFile)
 {
-	std::string vertexCode = get_file_contents(vertexFile);
+	std::string vertexCode = setLocation(get_file_contents(vertexFile));
 	std::string fragmentCode = get_file_contents(fragmentFile);
 
 	const char* vertexSource = vertexCode.c_str();
@@ -45,7 +59,6 @@ Shader::Shader(const char* vertexFile, const char* fragmentFile)
 
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
-
 }
 
 void Shader::Activate()

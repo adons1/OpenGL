@@ -154,9 +154,11 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="EBO.cpp" />
+    <ClCompile Include="model.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="LightningCube.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="obj_loader.cpp" />
     <ClCompile Include="Observable.cpp" />
     <ClCompile Include="Pyramide.cpp" />
     <ClCompile Include="shaderClass.cpp" />
@@ -173,6 +175,8 @@
     <None Include="circle.vert" />
     <None Include="default.frag" />
     <None Include="default.vert" />
+    <None Include="model.frag" />
+    <None Include="model.vert" />
     <None Include="lightning.frag" />
     <None Include="lightning.vert" />
     <None Include="pyramide.frag" />
@@ -186,9 +190,12 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="EBO.h" />
+    <ClInclude Include="model.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="LightningCube.h" />
+    <ClInclude Include="ModelLoader.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="obj_loader.h" />
     <ClInclude Include="Observable.h" />
     <ClInclude Include="Pyramide.h" />
     <ClInclude Include="shaderClass.h" />

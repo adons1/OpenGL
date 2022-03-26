@@ -51,8 +51,6 @@ void Pyramide::Init() {
 	_EBO.Unbind();
 	texture = Texture("emblema_mai.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	texture.texUnit(shader, "tex0", 0);
-
-	glEnable(GL_DEPTH_TEST);
 }
 
 float rotation = 0.0f;
@@ -68,7 +66,7 @@ void Pyramide::Draw() {
 
 	glUniform3f(glGetUniformLocation(shader.ID, "camPos"), camera->Position.x, camera->Position.y, camera->Position.z);
 	camera->Matrix(shader, "camMatrix");
-	camera->updateMatrix(45.0f, 0.1f, 1000.0f);
+	camera->updateMatrix(45.0f, 0.1f, 2000.0f);
 	GLuint uniID = glGetUniformLocation(shader.ID, "scale");
 
 	double crntTime = glfwGetTime();

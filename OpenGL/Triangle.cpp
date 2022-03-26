@@ -42,7 +42,7 @@ void Triangle::Draw() {
 
 	shader.Activate();
 	camera->Matrix(shader, "camMatrix");
-	camera->updateMatrix(45.0f, 0.1f, 1000.0f);
+	camera->updateMatrix(45.0f, 0.1f, 2000.0f);
 	glUniform4f(colorID, redValue, 0, blueValue, 1.0f);
 	glUniform1f(scaleID, scale);
 	glUniform1f(rotateID, rotate);

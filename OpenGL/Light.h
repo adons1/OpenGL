@@ -17,6 +17,6 @@ public:
 
 	void Recalc() {
 		float timeValue = glfwGetTime();
-		Position = glm::vec3(0.0f, 0.0f, 10.0f * sin(5 * timeValue));
+		Position = glm::vec3(5.0f, 5.0f, 5.0f /** sin(5 * timeValue)*/);
 	}
 };
