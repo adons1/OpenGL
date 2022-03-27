@@ -3,13 +3,10 @@
 int Shader::shaderLocationPointer = 0;
 
 std::string setLocation(std::string shader) {
-	int indexVert = shader.find("0000");
 
-	shader.replace(indexVert, 4, std::to_string(Shader::shaderLocationPointer));
-
-	int indexNorm = shader.find("0000");
-
-	shader.replace(indexNorm, 4, std::to_string(Shader::shaderLocationPointer + 1));
+	for (int i = 0; i < 4; i++) {
+		shader.replace(shader.find("0000"), 4, std::to_string(Shader::shaderLocationPointer + i));
+	}
 
 	return shader;
 }

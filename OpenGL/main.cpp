@@ -72,7 +72,7 @@ int main()
 		VAO _VAO;
 
 		Camera camera(width, height, glm::vec3(20.0f, 20.0f, 20.0f));
-		DotLight light(glm::vec3(0.0f, 0.0f, 10000.0f), glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
+		DotLight light(glm::vec3(0.0f, 10000.0f, 10000.0f), glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
 
 #pragma region Инициализируем фигуры
 		/*Square square(&_VAO, &camera, window);
@@ -91,7 +91,7 @@ int main()
 			pyramides[(int)i] = Pyramide(&_VAO, &camera, window, width, height, i, &light);
 		}*/
 
-		Model city(&_VAO, &camera, window, &light, std::string("city.obj"), glm::vec3(0.0f, 0.0f, 0.0f)); 
+		Model city(&_VAO, &camera, window, &light, std::string("cube.obj"), std::string("emblema_mai.png"));
 
 #pragma endregion
 
